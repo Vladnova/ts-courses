@@ -160,3 +160,27 @@ let user2: User = {
   age: 30,
   skills: ["ewe", "werwr"],
 };
+
+// interface
+
+interface UserI {
+  name: string;
+  age: number;
+  skills: string[];
+}
+
+interface Role extends UserI {
+  roleId: number
+}
+
+let user3:Role = {
+  name: "sdfs",
+  age: 30,
+  skills: ["ewe", "werwr"],
+  roleId: 2
+};
+
+
+interface UserDic {
+  [index: number]: UserI
+}
