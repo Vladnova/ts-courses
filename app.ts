@@ -21,12 +21,16 @@ skills.filter((s) => s !== "DevOps");
 
 // tuples
 
-const newSkills:[string, number] = ["Dev", 1];
+const newSkills: [string, number] = ["Dev", 1];
 
-newSkills.push('testing')
-console.log(newSkills)
-const s = newSkills[0]
-const b = newSkills[1]
+newSkills.push("testing");
+console.log(newSkills);
+const s = newSkills[0];
+const b = newSkills[1];
 
-const arr: [string, number, ...boolean[]] = ['test', 2, true, false]  
+const arr: [string, number, ...boolean[]] = ["test", 2, true, false];
+
+// readOnly
+
+const skills2: readonly [string, number] = ["dev", 5];
 
