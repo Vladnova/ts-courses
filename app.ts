@@ -140,3 +140,23 @@ function fetchWithAuth(url: string, method: "post" | "get") {}
 
 fetchWithAuth("d", "get");
 fetchWithAuth("f", methodT as "post");
+
+//  Aliases type
+
+type methodHttp = "post" | "get";
+
+function fetchWithAuthNew(url: string, method: methodHttp) {}
+
+fetchWithAuth("d", "post");
+
+type User = {
+  name: string;
+  age: number;
+  skills: string[];
+};
+
+let user2: User = {
+  name: "sdfs",
+  age: 30,
+  skills: ["ewe", "werwr"],
+};
