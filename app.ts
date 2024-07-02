@@ -10,7 +10,7 @@ const user = {
 };
 
 getFullName(user);
-
+// arry types
 const skills: string[] = ["Dev", "DevOps", "Testing"];
 
 for (const skill of skills) {
@@ -18,3 +18,15 @@ for (const skill of skills) {
 }
 
 skills.filter((s) => s !== "DevOps");
+
+// tuples
+
+const newSkills:[string, number] = ["Dev", 1];
+
+newSkills.push('testing')
+console.log(newSkills)
+const s = newSkills[0]
+const b = newSkills[1]
+
+const arr: [string, number, ...boolean[]] = ['test', 2, true, false]  
+
