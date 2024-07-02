@@ -76,3 +76,40 @@ async function getFaqs(req: { tipicId: number; status?: statusReq }): Promise<
   const data = await res.json();
   return data;
 }
+
+//union
+
+function logId(id: string | number | boolean) {
+  if (typeof id === "string") {
+    console.log(id.toLowerCase());
+  } else if (typeof id === "number"){
+    console.log(id)
+  }else {
+    console.log(id)
+  }
+}
+
+function logError(err: string | string[]) {
+  if(Array.isArray(err)) {
+    console.log(err)
+  }else {
+    console.log(err)
+  }
+
+}
+
+function logObj(obj: {a: number} | {v: number}) {
+  if('a' in obj) {
+    console.log(obj.a)
+  }else{
+    console.log(obj.v)
+  }
+}
+
+function logMultipleIds(a:string | number, b: string | boolean) {
+  if(a===b) {
+    console.log(a)
+  }else {
+    console.log(a)
+  }
+}
