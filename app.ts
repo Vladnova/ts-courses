@@ -10,3 +10,11 @@ const user = {
 };
 
 getFullName(user);
+
+const skills: string[] = ["Dev", "DevOps", "Testing"];
+
+for (const skill of skills) {
+  console.log(skill);
+}
+
+skills.filter((s) => s !== "DevOps");

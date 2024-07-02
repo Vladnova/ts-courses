@@ -9,3 +9,7 @@ const user = {
     age: 30,
 };
 getFullName(user);
+const skills = ['Dev', 'DevOps'];
+for (const skill of skills) {
+    console.log(skill);
+}
