@@ -34,3 +34,21 @@ const arr: [string, number, ...boolean[]] = ["test", 2, true, false];
 
 const skills2: readonly [string, number] = ["dev", 5];
 
+// enums
+
+enum statusCode {
+  SUCCESS = 1,
+  IN_PROCESS,
+  FAILD
+}
+
+const res = {
+  message: 'success',
+  statusCode: statusCode.SUCCESS
+}
+
+
+
+// 1 - успішно
+// 2 - в процесі
+// 3  відхилено
