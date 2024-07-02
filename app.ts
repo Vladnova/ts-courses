@@ -53,6 +53,25 @@ const res = {
 
 // function
 
+/* Запрос */
+//{
+//	"topicId": 5,
+//	"status": "published" // "draft", "deleted"
+//}
+/* Ответ */
+//[
+//	{
+//		"question": "Как осуществляется доставка?",
+//		"answer": "быстро!",
+//		"tags": [
+//			"popular",
+//			"new"
+//		],
+//		"likes": 3,
+//		"status": "published"
+//	}
+//]
+
 enum statusReq {
   Published = "published",
   Draft = "draft",
