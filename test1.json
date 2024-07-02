@@ -1,0 +1,11 @@
+{
+	"officeId": 45,
+	"isOpened": false,
+	"contacts": {
+		"phone": "+380967185962",
+		"email": "test@ukr.net",
+		"address": {
+			"city": "Lviv"
+		}
+	}
+}
