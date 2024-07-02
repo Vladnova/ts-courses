@@ -39,16 +39,40 @@ const skills2: readonly [string, number] = ["dev", 5];
 enum statusCode {
   SUCCESS = 1,
   IN_PROCESS,
-  FAILD
+  FAILD,
 }
 
 const res = {
-  message: 'success',
-  statusCode: statusCode.SUCCESS
-}
-
-
+  message: "success",
+  statusCode: statusCode.SUCCESS,
+};
 
 // 1 - успішно
 // 2 - в процесі
 // 3  відхилено
+
+// function
+
+enum statusReq {
+  Published = "published",
+  Draft = "draft",
+  Deleted = "deleted",
+}
+
+async function getFaqs(req: { tipicId: number; status?: statusReq }): Promise<
+  {
+    question: string;
+    answer: string;
+    tags: string[];
+    likes: number;
+    status: statusReq;
+  }[]
+> {
+  const res = await fetch("./faqs", {
+    method: "POST",
+    body: JSON.stringify(req),
+  });
+
+  const data = await res.json();
+  return data;
+}
