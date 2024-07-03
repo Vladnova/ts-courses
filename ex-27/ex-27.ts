@@ -71,3 +71,20 @@ function getSomething(): IResponseSuccess | IResponseFailed {
     },
   };
 }
+
+// перевірка з type guard
+
+type func = (res: IResponseFailed | IResponseSuccess) => number;
+type Res = IResponseFailed | IResponseSuccess;
+
+function isResponseSuccess(resp: Res): resp is IResponseSuccess {
+  return resp.status === PaymantStatus.Success;
+}
+
+function checkPaymant(response: Res): number {
+  if (isResponseSuccess(response)) {
+    return response.data.databaseId;
+  } else {
+    throw new Error(response.data.errorMessage);
+  }
+}
