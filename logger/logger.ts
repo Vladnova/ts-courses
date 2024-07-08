@@ -6,17 +6,18 @@ abstract class MyLogger {
   }
 }
 
-class UserLoger extends MyLogger {
+class UserLogger extends MyLogger {
   log(message: string): void {
     console.log(message);
   }
 
-  logWirhDate(m: string): void {
+  logWithDate(m: string): void {
     this.printDate(new Date());
     this.log(m);
   }
 }
 
-const l = new UserLoger();
+const l = new UserLogger();
 
-l.logWirhDate("hi");
+
+l.logWithDate("hi");
