@@ -1,9 +1,9 @@
-interface IUsersService {
+interface IUsersService2 {
   users: number;
   getUsersService(): number;
 }
 
-class UsersService implements IUsersService {
+class UsersService implements IUsersService2 {
   users: number = 2000;
 
   @LogDec
