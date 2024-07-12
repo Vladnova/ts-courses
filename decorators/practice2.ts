@@ -1,9 +1,9 @@
-interface IUsersService2 {
+interface IUsersService3 {
   users: number;
   getUsersService(): number;
 }
 
-class UsersService2 implements IUsersService2 {
+class UsersService2 implements IUsersService3 {
   users: number = 2000;
 
   @Catch()
@@ -12,7 +12,7 @@ class UsersService2 implements IUsersService2 {
   }
 }
 
-function Catch(rethrow: boolean = false) {
+function Catch({rethrow}:{rethrow:boolean}  ={rethrow:false}) {
   return (
     target: Object,
     _: string | symbol,
