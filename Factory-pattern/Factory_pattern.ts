@@ -69,3 +69,5 @@ class ABInsuranceFactory extends InsuranceFactory{
 const tfInsurance = new TFInsuranceFactory();
 const ins = tfInsurance.createInsurance();
 tfInsurance.saveInsurance(ins);
+
+
