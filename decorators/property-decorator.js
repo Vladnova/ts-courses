@@ -56,7 +56,6 @@ var UsersService3 = function () {
 }();
 function Max(max) {
     return function (target, propertyKey) {
-        if (target === void 0) { target = new UsersService3(); }
         console.log(target);
         console.log(propertyKey);
         var value;

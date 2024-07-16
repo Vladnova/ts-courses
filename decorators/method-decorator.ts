@@ -20,6 +20,7 @@ function LogDec(
   console.log(target);
   console.log(propertyKey);
   console.log(descriptor);
+  
   descriptor.value = () => {
     console.log("message");
   };

@@ -53,8 +53,8 @@ var UsersService2 = function () {
         })(),
         _a;
 }();
-function Catch(rethrow) {
-    if (rethrow === void 0) { rethrow = false; }
+function Catch(_a) {
+    var _b = _a === void 0 ? { rethrow: false } : _a, rethrow = _b.rethrow;
     return function (target, _, descriptor) {
         var method = descriptor.value;
         descriptor.value = function () {
