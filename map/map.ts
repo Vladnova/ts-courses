@@ -19,3 +19,5 @@ const formValidation:Valid<IForm> = {
 type Valid<T> = {
   [K in keyof T]: { isValid: true } | { isValid: false; errorMessage: string };
 };
+
+
