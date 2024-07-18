@@ -71,3 +71,4 @@ var senderDelay = new DelayNotificationSender(new WhatsUpProvider());
 senderDelay.sendDelay('WU send delay');
 var sender2Delay = new DelayNotificationSender(new WhatsUpProvider());
 senderDelay.sendDelay('telegram send delay');
+[1, 2, 6].map(function (i) { return i + 2; });

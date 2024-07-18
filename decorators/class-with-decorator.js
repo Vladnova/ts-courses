@@ -53,7 +53,7 @@ var __setFunctionName = (this && this.__setFunctionName) || function (f, name, p
 };
 // @nullUserEx2
 var UserServiceEx2 = function () {
-    var _classDecorators = [threeUserEx3()];
+    var _classDecorators = [threeUserEx3];
     var _classDescriptor;
     var _classExtraInitializers = [];
     var _classThis;
@@ -79,24 +79,18 @@ var UserServiceEx2 = function () {
 // function nullUserEx2(target: Function) {
 //   target.prototype.users = 0;
 // }
-function threeUserEx3() {
-    return function (constructor) {
-        return /** @class */ (function (_super) {
-            __extends(class_1, _super);
-            function class_1() {
-                var args = [];
-                for (var _i = 0; _i < arguments.length; _i++) {
-                    args[_i] = arguments[_i];
-                }
-                var _this = _super.apply(this, args) || this;
-                // @ts-ignore
-                _this.users = 3;
-                return _this;
-            }
-            return class_1;
-        }(constructor));
-    };
+function threeUserEx3(constructor) {
+    return /** @class */ (function (_super) {
+        __extends(class_1, _super);
+        function class_1() {
+            var _this = _super !== null && _super.apply(this, arguments) || this;
+            _this.users = 3;
+            return _this;
+        }
+        return class_1;
+    }(constructor));
 }
+;
 console.log(new UserServiceEx2().getUsers());
 // function classDecoratorFactory() {
 //   return function <T extends { new (...args: any[]): {} }>(constructor: T) {
